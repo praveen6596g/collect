@@ -1,0 +1,6 @@
+package com.example.BankLoan1;
+
+public interface LoanRepository extends jpaRepository<LoanEntity,Integer> {
+	
+
+}

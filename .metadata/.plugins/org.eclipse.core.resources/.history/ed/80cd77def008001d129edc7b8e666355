@@ -1,0 +1,16 @@
+package com.example.Gst;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class GstService {
+@Autowired
+GstDao gd;
+public Int l(int a) {
+	return gd.l(a);
+}
+
+}

@@ -1,0 +1,47 @@
+package com.example.BankLoan1;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="loandetails")
+public class LoanEntity {
+	@Id
+	@GeneratedValue(strategy=GenerationType.Auto) 
+	private int id;
+	private int loanNumber;
+	private String customerName;
+	private int loanAmount;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getLoanNumber() {
+		return loanNumber;
+	}
+	public void setLoanNumber(int loanNumber) {
+		this.loanNumber = loanNumber;
+	}
+	public String getCustomerName() {
+		return customerName;
+	}
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	public int getLoanAmount() {
+		return loanAmount;
+	}
+	public void setLoanAmount(int loanAmount) {
+		this.loanAmount = loanAmount;
+	}
+
+  
+
+
+}

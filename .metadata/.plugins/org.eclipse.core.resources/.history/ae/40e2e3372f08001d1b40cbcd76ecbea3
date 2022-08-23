@@ -1,0 +1,29 @@
+package com.example.loanapp;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+
+@Service
+public class LoanService {
+	@Autowired
+	LoanDao ld;
+	public String saveIt(LoanEntity le) {
+		return ld.saveIt(le);
+	}
+	public List<LoanEntity>findAllDetail() {
+		return ld.findAllDetail();
+	}
+	
+		
+	
+	public String saveAll(List<LoanEntity>l) {
+		return ld.saveAll(l);
+	}
+	
+	
+	}
+

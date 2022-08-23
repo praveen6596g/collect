@@ -1,0 +1,29 @@
+package com.example.Sample;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+@RequestMapping(value="/Web")
+
+public class WebConnetivity {
+	@GetMapping(value="/hi")
+	public String getHi() {
+		return "hello world";
+	}
+	@GetMapping(value="/add/{num1}/{num2}")
+	public int add(@PathVariable int num1,@PathVariable int num2) {
+		return num1+num2;
+	}
+	@GetMapping(value="/merge/{num1}/{num2}")
+	public String merge(@PathVariable String num1,@PathVariable String num2) {
+		return num1.concat(num2);
+	}
+	@RequestMapping(value="/mul/{num1}/{num2}")
+	public String mul(@PathVariable String num1,@PathVariable String num2) {
+		return num1.concat(num2);
+	}
+
+}

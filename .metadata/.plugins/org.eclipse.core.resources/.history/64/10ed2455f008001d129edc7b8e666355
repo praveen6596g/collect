@@ -1,0 +1,13 @@
+package com.example.Gst;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface GstRepository extends JpaRepository<GstEntity,Integer> {
+	@Query (value="select * from gst_table where hsn=?",nativeQuery =true)
+	public List<Integer>l(int a);
+	
+
+}
