@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class MobileService {
 	@Autowired
 	MobileDao md;
+	
 	public List<MobileEntity> l(String a)
 	{
 		return md.l(a);
